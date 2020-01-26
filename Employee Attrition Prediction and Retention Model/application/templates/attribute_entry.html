@@ -1,0 +1,422 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+    <title>Employee Attrition - Attribute_Entry</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="static/css/main.css"/>
+    <link rel="stylesheet" href="static/css/style.css">
+    <noscript>
+        <link rel="stylesheet" href="static/css/noscript.css"/>
+    </noscript>
+
+
+</head>
+<body class="is-preload">
+
+<!-- Sidebar -->
+<section id="sidebar">
+    <div class="inner">
+        <nav>
+            <ul>
+                <li><a href="/file_upload">Upload the file</a></li>
+            </ul>
+        </nav>
+        <br>
+        <nav>
+            <ul>
+                <li><a href="/attribute_entry">Enter attributes manually</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</section>
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Intro -->
+    <section id="intro" class="wrapper style1 fullscreen fade-up">
+        <div class="inner">
+
+            <form name="ae" action="/yes" method="post" act>
+                <label> Age:
+                    <span id="slider_value" style="color:#D5DBDB;"></span><br>
+                    <input type="button" value="-" onClick="subtract_one()">  
+                    <input type="range" min="1" max="100" name="age" value="1" onchange="show_value(this.value);" required>
+                    <input type="button" value="+" onClick="add_one()"><br></label>
+                    
+                <label> Distance From Home (in kms):
+                    <span id="slider_value1" style="color:#D5DBDB;"></span> <br>
+                    <input type="button" value="-" onClick="subtract_one1()"> 
+                    <input type="range" min="0" max="50" name="dfh" value="0" onchange="show_value1(this.value);" required>
+                    <input type="button" value="+" onClick="add_one1()"><br></label>
+
+                <label> Number of Companies Worked Before Current Company:
+                    <span id="slider_value2" style="color:#D5DBDB;"></span><br>
+                    <input type="button" value="-" onClick="subtract_one2()"> 
+                    <input type="range" min="0" max="20" name="ncw" value="0" onchange="show_value2(this.value);" required>
+                    <input type="button" value="+" onClick="add_one2()"><br></label>
+
+                <label> Total Working Years:
+                    <span id="slider_value3" style="color:#D5DBDB;"></span><br>
+                    <input type="button" value="-" onClick="subtract_one3()"> 
+                    <input type="range" min="0" max="50" name="twy" value="0" onchange="show_value3(this.value);" required>
+                    <input type="button" value="+" onClick="add_one3()"><br></label>
+
+                <label> Years Since Last Promotion:
+                    <span id="slider_value4" style="color:#D5DBDB;"></span><br>
+                    <input type="button" value="-" onClick="subtract_one4()"> 
+                    <input type="range" min="0" max="50" name="ylp" value="0" onchange="show_value4(this.value);" required>
+                    <input type="button" value="+" onClick="add_one4()"><br></label>
+
+                <label> Years At Company:
+                    <span id="slider_value5" style="color:#D5DBDB;"></span><br>
+                    <input type="button" value="-" onClick="subtract_one5()"> 
+                    <input type="range" min="0" max="50" name="yac" value="0" onchange="show_value5(this.value);" required>
+                    <input type="button" value="+" onClick="add_one5()"><br></label>
+
+                <label> Years In Current Role:
+                    <span id="slider_value6" style="color:#D5DBDB;"></span><br>
+                    <input type="button" value="-" onClick="subtract_one6()"> 
+                    <input type="range" min="0" max="50" name="ycr" value="0" onchange="show_value6(this.value);" required>
+                    <input type="button" value="+" onClick="add_one6()"><br></label>
+
+                <label> Years With Current Manager:
+                    <span id="slider_value7" style="color:#D5DBDB;"></span><br>
+                    <input type="button" value="-" onClick="subtract_one7()">
+                    <input type="range" min="0" max="50" name="ycm" value="0" onchange="show_value7(this.value);" required>
+                    <input type="button" value="+" onClick="add_one7()"><br></label>
+
+                <label> Training Times Last Year:
+                    <span id="slider_value8" style="color:#D5DBDB;"></span><br>
+                    <input type="button" value="-" onClick="subtract_one8()"> 
+                    <input type="range" min="0" max="15" name="tly" value="0" onchange="show_value8(this.value);" required>
+                    <input type="button" value="+" onClick="add_one8()"><br></label>
+
+                <label> Salary Hike Percentage:
+                    <span id="slider_value9" style="color:#D5DBDB;"></span><br>
+                    <input type="button" value="-" onClick="subtract_one9()"> 
+                    <input type="range" min="0" max="100" name="shp" value="0" onchange="show_value9(this.value);" required>
+                    <input type="button" value="+" onClick="add_one9()"><br></label>
+                
+                <label> Job Level (1-Low , 5-High) :
+                    <span id="slider_value10" style="color:#D5DBDB;"></span><br>
+                    <input type="button" value="-" onClick="subtract_one10()"> 
+                    <input type="range" min="1" max="5" name="jl" value="1" onchange="show_value10(this.value);" required>
+                    <input type="button" value="+" onClick="add_one10()"><br><br></label>
+                
+                <label> Job Involvement:
+                    <input type="radio" name="ji" value="1" required>Low
+                    <input type="radio" name="ji" value="2">Medium
+                    <input type="radio" name="ji" value="3">High
+                    <input type="radio" name="ji" value="4">Very High
+                <br><br></label>
+
+                <label> Over Time:
+                    <input type="radio" name="ot" value="1" required>Yes
+                    <input type="radio" name="ot" value="0">No
+                <br><br></label>
+
+                <label> Business Travel:
+                    <input type="radio" name="bt" value="0" required>No Travel
+                    <input type="radio" name="bt" value="1">Travel Rarely
+                    <input type="radio" name="bt" value="2">Travel Frequently
+                <br><br></label>
+                
+                <label> Performance Rating:
+                    <input type="radio" name="pr" value="1" required>Poor
+                    <input type="radio" name="pr" value="2">Good
+                    <input type="radio" name="pr" value="3">Excellent
+                    <input type="radio" name="pr" value="4">Outstanding
+                <br><br></label>
+
+                <label> Education Level:
+                    <input type="radio" name="el" value="1" required>Below College
+                    <input type="radio" name="el" value="2">College
+                    <input type="radio" name="el" value="3">Bachelor
+                    <input type="radio" name="el" value="4">Master
+                    <input type="radio" name="el" value="5">Doctor
+                <br><br></label>
+
+                <label> Marital Status:
+                    <input type="radio" name="ms" value="1" required>Single
+                    <input type="radio" name="ms" value="2">Married
+                    <input type="radio" name="ms" value="3">Divorced
+                <br><br></label>
+
+                <label> Monthly Income:
+                    <input type="text" name="mi" required><br> </label>
+                    
+                <label> Education Field:
+                    <select name="ef">
+                        <option value="" selected disabled hidden>--Select--</option>
+                        <option value="1" required>Human Resources</option>
+                        <option value="2">Technical Degree</option>
+                        <option value="3">Life Sciences</option>
+                        <option value="4">Marketing</option>
+                        <option value="5">Medical</option>
+                        <option value="6">Other</option>
+                    </select><br></label>
+
+                <label> Stock Option Level:
+                    <select name="sol">
+                        <option value="" selected disabled hidden>--Select--</option>
+                        <option value="0" required>0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select><br></label>
+                    
+                <label> Job Role:
+                    <select name="jr">
+                        <option value="" selected disabled hidden>--Select--</option>
+                        <option value="1" required>Healthcare Representative</option>
+                        <option value="2">Human Resources</option>
+                        <option value="3">Laboratory Technician</option>
+                        <option value="4">Manager</option>
+                        <option value="5">Manufacturing Director</option>
+                        <option value="6">Research Director</option>
+                        <option value="7">Research Scientist</option>
+                        <option value="8">Sales Executive</option>
+                        <option value="9">Sales Representative</option>
+                    </select><br></label>
+
+                
+
+                <input type="submit" value="Submit">
+            </form>
+
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/cropperjs/0.8.1/cropper.min.js'></script>
+
+
+            <script src="static/js/index.js"></script>
+
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="static/js/lib/jquery.min.js"></script>
+    <script src="static/js/lib/jquery.scrollex.min.js"></script>
+    <script src="static/js/lib/jquery.scrolly.min.js"></script>
+    <script src="static/js/lib/browser.min.js"></script>
+    <script src="static/js/lib/breakpoints.min.js"></script>
+    <script src="static/js/util.js"></script>
+    <script src="static/js/main.js"></script>
+    <script>
+    function show_value(x)
+    {
+    document.getElementById("slider_value").innerHTML=x;
+    }
+    
+    function add_one()
+    {
+    document.ae.age.value=parseInt(document.ae.age.value)+1;
+    show_value(document.ae.age.value);
+    }
+    function subtract_one()
+    {
+    document.ae.age.value=parseInt(document.ae.age.value)-1;
+    show_value(document.ae.age.value);
+    }
+
+    </script>
+    
+    <script>
+    function show_value1(x)
+    {
+    document.getElementById("slider_value1").innerHTML=x;
+    }
+    
+    function add_one1()
+    {
+    document.ae.dfh.value=parseInt(document.ae.dfh.value)+1;
+    show_value1(document.ae.dfh.value);
+    }
+    function subtract_one1()
+    {
+    document.ae.dfh.value=parseInt(document.ae.dfh.value)-1;
+    show_value1(document.ae.dfh.value);
+    }
+    
+    </script>
+    
+    <script>
+    function show_value2(x)
+    {
+    document.getElementById("slider_value2").innerHTML=x;
+    }
+    
+    function add_one2()
+    {
+    document.ae.ncw.value=parseInt(document.ae.ncw.value)+1;
+    show_value2(document.ae.ncw.value);
+    }
+    function subtract_one2()
+    {
+    document.ae.ncw.value=parseInt(document.ae.ncw.value)-1;
+    show_value2(document.ae.ncw.value);
+    }
+    
+    </script>
+    
+    <script>
+    function show_value3(x)
+    {
+    document.getElementById("slider_value3").innerHTML=x;
+    }
+    
+    function add_one3()
+    {
+    document.ae.twy.value=parseInt(document.ae.twy.value)+1;
+    show_value3(document.ae.twy.value);
+    }
+    function subtract_one3()
+    {
+    document.ae.twy.value=parseInt(document.ae.twy.value)-1;
+    show_value3(document.ae.twy.value);
+    }
+    
+    </script>
+    
+    <script>
+    function show_value4(x)
+    {
+    document.getElementById("slider_value4").innerHTML=x;
+    }
+    
+    function add_one4()
+    {
+    document.ae.ylp.value=parseInt(document.ae.ylp.value)+1;
+    show_value4(document.ae.ylp.value);
+    }
+    function subtract_one4()
+    {
+    document.ae.ylp.value=parseInt(document.ae.ylp.value)-1;
+    show_value4(document.ae.ylp.value);
+    }
+    
+    </script>
+    
+    <script>
+    function show_value5(x)
+    {
+    document.getElementById("slider_value5").innerHTML=x;
+    }
+    
+    function add_one5()
+    {
+    document.ae.yac.value=parseInt(document.ae.yac.value)+1;
+    show_value5(document.ae.yac.value);
+    }
+    function subtract_one5()
+    {
+    document.ae.yac.value=parseInt(document.ae.yac.value)-1;
+    show_value5(document.ae.yac.value);
+    }
+    
+    </script>
+    
+    <script>
+    function show_value6(x)
+    {
+    document.getElementById("slider_value6").innerHTML=x;
+    }
+    
+    function add_one6()
+    {
+    document.ae.ycr.value=parseInt(document.ae.ycr.value)+1;
+    show_value6(document.ae.ycr.value);
+    }
+    function subtract_one6()
+    {
+    document.ae.ycr.value=parseInt(document.ae.ycr.value)-1;
+    show_value6(document.ae.ycr.value);
+    }
+    
+    </script>
+    
+    <script>
+    function show_value7(x)
+    {
+    document.getElementById("slider_value7").innerHTML=x;
+    }
+    
+    function add_one7()
+    {
+    document.ae.ycm.value=parseInt(document.ae.ycm.value)+1;
+    show_value7(document.ae.ycm.value);
+    }
+    function subtract_one7()
+    {
+    document.ae.ycm.value=parseInt(document.ae.ycm.value)-1;
+    show_value7(document.ae.ycm.value);
+    }
+    
+    </script>
+    
+    <script>
+    function show_value8(x)
+    {
+    document.getElementById("slider_value8").innerHTML=x;
+    }
+    
+    function add_one8()
+    {
+    document.ae.tly.value=parseInt(document.ae.tly.value)+1;
+    show_value8(document.ae.tly.value);
+    }
+    function subtract_one8()
+    {
+    document.ae.tly.value=parseInt(document.ae.tly.value)-1;
+    show_value8(document.ae.tly.value);
+    }
+    
+    </script>
+    
+    <script>
+    function show_value9(x)
+    {
+    document.getElementById("slider_value9").innerHTML=x;
+    }
+    
+    function add_one9()
+    {
+    document.ae.shp.value=parseInt(document.ae.shp.value)+1;
+    show_value9(document.ae.shp.value);
+    }
+    function subtract_one9()
+    {
+    document.ae.shp.value=parseInt(document.ae.shp.value)-1;
+    show_value9(document.ae.shp.value);
+    }
+    
+    </script>
+    
+    <script>
+    function show_value10(x)
+    {
+    document.getElementById("slider_value10").innerHTML=x;
+    }
+    
+    function add_one10()
+    {
+    document.ae.jl.value=parseInt(document.ae.jl.value)+1;
+    show_value10(document.ae.jl.value);
+    }
+    function subtract_one10()
+    {
+    document.ae.jl.value=parseInt(document.ae.jl.value)-1;
+    show_value10(document.ae.jl.value);
+    }
+    
+    </script>
+    
+    
+</body>
+</html>
